@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<htm
-        l lang="en">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <style>
+        * {box-sizing: border-box;}
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+        .footer {
+            position: fixed;
+            background-color: cadetblue;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+            text-align: center;
+        }
+
+        .container{
+
+
+        }
+
+        .container-fluid{
+            background-color: lightsteelblue;
+            padding: 0px;
+            color: black;
+
+
+        }
+        .navbar-header{
+
+            color: blue;
+        }
+
+
+    </style>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-History
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">The History of Internet</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="internet_search.html">Internet Search</a></li>
+            <li><a href="dotcom_bubble.html">Dot Com Bubble</a></li>
+            <li><a href="browser_wars.html">Browser Wars</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">People to Know<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://en.wikipedia.org/wiki/J._C._R._Licklider">JCR Licklider</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Robert_Taylor_(computer_scientist)">Bob Taylor</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Lawrence_Roberts_(scientist)">Larry Roberts</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
 </body>
 </html>
