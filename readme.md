@@ -2,6 +2,7 @@
 
 
 #Madhurima Singh (ms426)
+
 <a href="http://history-ms426.eastus.azurecontainer.io/index.html">Home</a>
 
 <a href="http://history-ms426.eastus.azurecontainer.io/browser_wars.html">Browser Wars</a>
