@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-image: url(https://cdn.pixabay.com/photo/2017/02/18/01/26/background-2076334_1280.jpg);
+            background-color: snow;
             background-size: cover;
             height: 100%;
             padding: 0;
@@ -30,18 +30,63 @@
             }
         }
 
-        .jumbotron{
-            background-image: url(https://www.maxpixel.net/static/photo/1x/Glow-Blue-Light-Background-Abstract-Creative-2217157.jpg);
+        .hero-text {
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        .hero-image {
+            background-image: url("https://1e8q3q16vyc81g8l3h3md6q5f5e-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/Meaningful-Connectivity.jpg");
+            width: 100%;
+            height: 400px;
+            background-position: center;
             background-size: cover;
-            height: 100%;
-            padding: 0;
-        }
-        .container-fluid{
 
         }
+.al{
+    display: flex;
+    justify-content: center;
 
+}
 
+.button{
 
+    height: 100%;
+    position: relative;
+
+}
+
+.center{
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 30%;
+
+}
+        .image {
+            width: 50%;
+            height: auto;
+
+        }
+
+        .para1 {
+            position: relative;
+            display: grid;
+            text-align: center;
+        }
+
+        .para0 {
+            position: relative;
+            display: grid;
+            text-align: center;
+        }
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,46 +120,53 @@
     </div>
 </nav>
 
-<div class="jumbotron text-center">
-    <h1>The Invention of the Internet</h1>
-    <p>Internet is one of the most important human inventions in the history of Mankind<br>
-        No invention in history has grown so fast to touch so many lives</p>
+<div class="hero-image">
+    <div class="hero-text">
+        <h1 style="font-size:50px">The Invention of the Internet</h1>
+        <p style="font-size:30px">Internet is one of the most important human inventions in the history of Mankind<br>
+            No invention in history has grown so fast to touch so many lives</p>
 
+    </div>
+</div>
+<br>
+<div class="para0">
+    <h2>Who Invented the Internet?</h2>
+    <p style="font-size:23px">
+        No single person or entity can be credited with the invention of Internet, i.e. the internet as we know it
+        today- containing browser windows, websites, URLs, and search bars.
+    </p>
+</div>
+<br>
+<div class="al">
+    <img class="image" src="https://www.dignited.com/wp-content/uploads/2019/05/internet-graphic-1024x576.jpg" alt="IOT">
+</div>
+<br><br>
+<div class="para1">
+    <p style="font-size:23px">
+        The building of the World Wide Web started as early as the 1960s when the application for time-sharing
+        was first patented
+    </p>
 </div>
 
+<br>
+
+<div class="button">
+    <div class="center">
+        <a class="btn btn-primary btn-block active" href="internet_search.html" role="button">Learn More</a>
+
+    </div>
+
+</div>
 
 </body>
 </html>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <h3>Who Invented the Internet?</h3><br>
-            <p>No single person or entity can be credited with the invention of Internet, i.e. the internet as we know it
-            today- containing browser windows, websites, URLs, and search bars.</p>
-
-            <p>The building of the World Wide Web started as early as the 1960s when the application for time-sharing
-            was first patented</p>
-        </div>
-        <div class="col-sm-4">
-            <h3>Inventions that Contributed!</h3><br>
-           <p>Packet switching<br>NPL network<br>ARPANET<br>Merit Network
-           <br>CYCLADES<br>TCP/IP</p>
-        </div>
-        <div class="col-sm-4">
-            <br><br><br><br><br><br><br><br><br>
-
-
-            <a class="btn btn-primary btn-block active" href="https://en.wikipedia.org/wiki/History_of_the_Internet" role="button">Learn More</a>
-
-        </div>
-    </div>
-</div>
+<br><br><br>
 
 <div class="footer">
-    <br>
+
     <p> <a href="https://validator.w3.org/">W3C Validator</a><br>
         &copy;<a href="https://github.com/madhurima309/history-of-internet">Madhurima Github</a>
-         <a href="https://github.com/pkb94/history-of-internet">Pooja Github</a>
+        <a href="https://github.com/pkb94/history-of-internet">Pooja Github</a>
     </p>
 </div>
 
