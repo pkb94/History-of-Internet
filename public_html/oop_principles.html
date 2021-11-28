@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {box-sizing: border-box;}
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: snow;
+            background-size: cover;
+            height: 100%;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+
+        }
+
+        @media screen and (max-width: 650px) {
+            .column, .nav, .row, .footer{
+                width: 100%;
+                display: block;
+                flex-direction: column;
+            }
+        }
+
+        .jumbotron{
+            background-image: url(https://www.maxpixel.net/static/photo/1x/Cyan-Pale-Light-Blue-Background-Light-White-2517226.jpg);
+            background-size: cover;
+            height: 100%;
+            padding: 0;
+        }
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+            text-align: center;
+        }
+    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Internet history</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">The History of Internet</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li  class="active"><a href="index.html">Home</a></li>
+            <li><a href="internet_search.html">Internet Search</a></li>
+            <li><a href="dotcom_bubble.html">Dot Com Bubble</a></li>
+            <li><a href="browser_wars.html">Browser Wars</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Project Two<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Pylint_and_OOP.html">Pylint and OOP</a></li>
+                    <li><a href="aaa_testing.html">AAA Testing</a></li>
+                    <li><a href="oop_principles.html">Calculator Program Explained</a></li>
+                    <li><a href="oop_solid_design.html">SOLID Object Oriented Design</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="jumbotron text-center">
+        <h1 class="display-7 fst-italic">Object Oriented Programming</h1>
+        <h4>Understanding the OOP Concepts.</h4>
+    </div>
+
+    <h2>Principles of OOP</h2>
+    <div class="article_content">
+    <hr>
+    <h3>Encapsulation</h3>
+    <p>Encapsulation is the concept that an object contains its own, private information. Within a class that is
+       built around an object, the class contains public methods that are able to operate on the private information
+       held within the objects private variables. The private information for an object is unique to that object,
+       and even objects within the same class cannot directly access that information.
+       In the calculator, we have implemented this concept with our Calculation class.</p>
+
+       <img class="article_img" src="images/Encapsulation.png" alt="An image of the calculation class in the calculator" width="500" height="150">
+       <br>
+       <br>
+       <p> The calculation class initiates/creates an object with the private variable "values" which is instantiated by the user.
+           Although there are a few more steps within the program to create an object, this represents encapsulation
+           because the "values" is stored within "self" which is the object.</p>
+       <hr>
+       <h3>Abstraction</h3>
+       <p>Abstraction is the concept that extends from encapsulation. An object should only be operable at a high level
+       by the class it was created with. Within programming in general, there is a goal to achieve, and it does not
+       matter how that goal is achieved. Within the calculator program, I will show you how abstraction works with the addition method.</p>
+
+       <img class="article_img" src="images/Abstraction.png" alt="addition method of the calculator" width="500" height="200">
+        <br>
+       <p>From the Calculator class, passing a tuple the "adding" method will return the sum of the numbers
+         passed to it. However, we can see that the calculator is more involved than just summing the values. There
+         is a History class, and a method, "addition_calculation" that is not found inside the calculator. So let's
+         follow this program and see where we end up.</p>
+        <img class="article_img" src="images/Abstraction1.png" alt="addition_calculation method in history class" height="200" width="500">
+        <br>
+        <p>When we follow the trail to the addition calculation of the History class, we can see that there is a method,
+           "append_to_history", that adds the Addition.create(values) to a history. This is representative of the factory method,
+           where each method has one task and that's it. The task of "append_to_history" is to store the object to a history
+           that can be referenced later one, however, right now, we are concerned with where the addition calculation occurs.
+           Next, we will follow this method to the Addition class.</p>
+        <img class="article_img" src="images/Abstraction2.png" alt="image of the addition class" width="500" height="200">
+        <br>
+        <p>Finally, we have reached the end. We can see that this object reaches its result by calling
+           a methods through a series of classes, and eventually leads back to the Addition class to perform the summing
+           operation. Then the result is returned through those same methods and the user can receive the result at the surface.
+           </p>
+        <hr>
+        <h3>Inheritance</h3>
+        <p>Inheritance within object-oriented programming is similar to how inheritance works within real life. Similar to
+           how a child inherits the traits of the parents, a child class can inherit traits from a parent class within
+           object-oriented programming! This allows a developer to reduce redundancy and allow a generic parent class
+           share its methods and traits with multiple, more specific child classes. In our calculator, we can see this
+           in the Calculation class and how it interacts with the children classes.</p>
+        <br>
+        <img class="article_img" src="images/Inheritance.png" alt="calculation class" height="375" width="500">
+        <br><br>
+        <p>Above, we can see the entire calculation class for the calculator. On its own, it doesn't particularly do
+           too much. It instantiates an object, it has a factory method to create objects, and it converts a tuple of
+           values into a list of floats. That is not particularly exciting, but it serves a very important function. It
+           essentially prepares the values passed to it to be used by its children classes. Addition, Subtraction,
+           Multiplication, and Division.
+            </p>
+        <br>
+        <img class="article_img" src="images/Inheritance1.png" alt="subtraction class of the calculator" width="500" height="200">
+    </div>
+</main>
+<div class="footer">
+    <p> <a href="https://validator.w3.org/">W3C Validator</a><br>
+        &copy;
+        <a href="https://github.com/pkb94/history-of-internet">Github</a>
+    </p>
+</div>
+</body>
+</html>
