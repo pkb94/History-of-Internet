@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {box-sizing: border-box;}
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: snow;
+            background-size: cover;
+            height: 100%;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+
+        }
+
+        @media screen and (max-width: 650px) {
+            .column, .nav, .row, .footer{
+                width: 100%;
+                display: block;
+                flex-direction: column;
+            }
+        }
+
+        .jumbotron{
+            background-image: url(https://www.maxpixel.net/static/photo/1x/Cyan-Pale-Light-Blue-Background-Light-White-2517226.jpg);
+            background-size: cover;
+            height: 100%;
+            padding: 0;
+        }
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+            text-align: center;
+        }
+    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Internet history</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">The History of Internet</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li  class="active"><a href="index.html">Home</a></li>
+            <li><a href="internet_search.html">Internet Search</a></li>
+            <li><a href="dotcom_bubble.html">Dot Com Bubble</a></li>
+            <li><a href="browser_wars.html">Browser Wars</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Project Two<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Pylint_and_OOP.html">Pylint and OOP</a></li>
+                    <li><a href="aaa_testing.html">AAA Testing</a></li>
+                    <li><a href="oop_principles.html">Calculator Program Explained</a></li>
+                    <li><a href="oop_solid_design.html">SOLID Object Oriented Design</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="jumbotron text-center">
+        <h1 class="display-7 fst-italic">AAA Testing Tutorial</h1>
+        <h4>Why is testing important?</h4>
+    </div>
+
+        <h2>Understanding AAA Testing</h2>
+            <hr>
+            <p>AAA testing is an acronym for <strong><i>Arrange, Act, Assert</i></strong>. These are the steps to develop an effective
+            unit test for your code.<br><br>
+            <b>Arrange - </b> involves the construction of the test case. This is where you set up the situation and
+            parameters needed to test a function or method.<br><br>
+            <b>Act - </b> is executing the target behavior of the test case. Utilizing the arrangement from the previous
+            step, <i>Act</i> involves performing the action that is being tested.<br><br>
+            <b>Assert </b>- is the act of confirming expected outcomes. This step takes the result from the <i>Act</i> step
+             and tests it against the expected outcome</p>
+            <hr>
+            <h4>Why AAA is Important?!</h4>
+            <br>
+            <p>
+                Arrange-Act-Assert is powerful because it is simple. It forces tests to focus on independent, individual
+                behaviors. It separates setup actions from the main actions. It requires test to make verifications and
+                not merely run through motions. Notice how the pattern is not Arrange-Act-Assert-Act-Assert – subsequent
+                actions and assertions belong in separate tests. Arrange-Act-Assert is a great pattern to follow for
+                writing good functional tests.
+            </p>
+            <hr>
+            <h4> How AAA Testing is implemented in Calculator?? </h4>
+            <br>
+            <p>
+                The addition function adds a tuple of numbers and stores it to the history. This is the <i>facade</i> of
+            the calculator so the actual calculation, the object creation, and storing the value in the history is hidden
+            behind the scenes. But regardless, this function is supposed to return the sum of the values. Below shown
+            code is the AAA style unit test for the addition function.
+            </p>
+            <img class="article_img" src="images/AAA_addition_calc.png" alt="pylint passed" width="550" height="150"><br>
+            <br>
+            <p>
+                The first line where the tuple is created will be the <i>Arrange</i> step where data is set up to
+             perform the test.
+             The second step is <i>Act</i> where the main action is performed. The addition function is called and the
+             <i>result</i> variable is set to the result of the method.
+            In the last step, the <i>Assertion</i> is made where we know the expected result,
+            and we are making sure that the method returns the expected result. In this case, 3 + 4 + 5 = 12.
+            </p>
+            <img class="article_img" src="images/AAA_division_calc.png" alt="pylint passed" width="550" height="150"><br>
+            <br>
+            <p>The division function divides a tuple of numbers and stores in to the history.
+            The first line where the tuple is created will be the <i>Arrange</i> step where data is set up to perform
+            the test.
+            The second step is <i>Act</i> where the main action is performed. The division  function is called and the
+            <i>result</i> variable is set to the result of the method.
+            In the last step, the <i>Assertion</i> is made where we know the expected result and making sure that the method
+            returns the expected result.
+            </p>
+            <hr>
+            <h4>Testing Using external Data</h4>
+            <br>
+            <p>An important aspect to testing would be making sure that the code is able to handle large amounts of data
+            In this example, we use pandas to read csv files containing data that will test each of the operations.
+
+            </p>
+            <p>An important aspect to testing your code is making sure that it is suitable to handle copious amounts of data
+            when it scales up. In this example, we use pandas to supply csv files containing data that will test each of
+            the operations. To demonstrate how to accomplish this, I will be using the <i>pandas</i> python package, and
+            demonstrate how to test with CSV's using the "test_subtracting method".</p>
+            <hr>
+            <p>We need to set up our csv files. Below, The CSV file used to create 4 columns containing
+            three different values, and a result column containing the addition of the values. Once we have the CSV,
+            we can put it into our project folder.
+            </p>
+            <br>
+            <img id="csv_table" src="images/Adding_CSV.png" alt="a csv of values and their addition" width="375" height="375">
+            <br>
+            <br>
+            <p>Once, the CSV is prepared. we can start writing the data using the pandas dataframe. Here, the class "CsvRead"
+            which reads the csv files and takes filepath as an input. The pandas modules has a method called "read_csv"
+            which makes it easy.
+            </p>
+            <br>
+            <img class="article_img" src="images/Test_addition.png" alt="the read csv method of csvread" width="500" height="150">
+            <br><br>
+            <p>Below, we're testing this method and making sure that it prints out the data frame we expected. For this,
+            we want to assure that we can access the values within the dataframe, so we print out the 'value_A' item from
+            each row.
+            </p>
+            <br>
+            <img class="article_img" src="images/Test_addition.png" alt="test for readcsv function" height="150" width="500">
+    <br>
+</main>
+<div class="footer">
+    <p> <a href="https://validator.w3.org/">W3C Validator</a><br>
+        &copy;
+        <a href="https://github.com/pkb94/history-of-internet">Github</a>
+    </p>
+</div>
+</body>
+</html>
