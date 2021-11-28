@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {box-sizing: border-box;}
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: snow;
+            background-size: cover;
+            height: 100%;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+
+        }
+
+        @media screen and (max-width: 650px) {
+            .column, .nav, .row, .footer{
+                width: 100%;
+                display: block;
+                flex-direction: column;
+            }
+        }
+
+        .jumbotron{
+            background-image: url(https://www.maxpixel.net/static/photo/1x/Cyan-Pale-Light-Blue-Background-Light-White-2517226.jpg);
+            background-size: cover;
+            height: 100%;
+            padding: 0;
+        }
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+            text-align: center;
+        }
+    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Internet history</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">The History of Internet</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li  class="active"><a href="index.html">Home</a></li>
+            <li><a href="internet_search.html">Internet Search</a></li>
+            <li><a href="dotcom_bubble.html">Dot Com Bubble</a></li>
+            <li><a href="browser_wars.html">Browser Wars</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Project Two<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Pylint_and_OOP.html">Pylint and OOP</a></li>
+                    <li><a href="aaa_testing.html">AAA Testing</a></li>
+                    <li><a href="oop_principles.html">Calculator Program Explained</a></li>
+                    <li><a href="oop_solid_design.html">SOLID Object Oriented Design</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="jumbotron text-center">
+        <h1 class="display-7 fst-italic">SOLID - Object Oriented Design</h1>
+        <h4>Understanding the SOLID Concepts.</h4>
+    </div>
+
+
+<div class="article_content">
+    <p>SOLID is actually an acronym that represents a set of design principles in object-oriented programs which
+       allows code to be written in a way that is logical and easily readable by individuals. This in turn, allows
+       code to be more scalable for when someone wants to come back and change something. In order, the principles in the
+        <i>SOLID</i> acronym means: Single Responsibility; Open-Closed; Liskov Substitution; Interface Segregation; and
+       Dependency Inversion. Let's go through the principles one by one.</p>
+    <hr>
+    <h3>Single Responsibility Principle</h3>
+    <p>The Single Responsibility Principle is that a class should only have one task. In programming, it can be
+       easy to load all the methods to handle a project within one class. However, when creating scalable code,
+       it's easier to organize and alter tasks as the needs of program change, and expand. In the Calculator program,
+       we can see how single responsibility principle is used by looking at any of our operation classes. Below is
+       the multiplication class.</p>
+    <br>
+    <img class="article_img" src="images/single_responsibility_principle.png" alt="multiplication class of the calculator" height="350" width="500">
+    <br><br>
+    <p>Here we can see that this class is solely responsible for creating the multiplication object, and storing
+       the values passed to it from the Calculation function. If the get_result method is called, then it will return
+       the product of the values.</p>
+    <hr>
+    <h3>Open-Closed Principle</h3>
+    <p>The Open-Close Principle describes that classes, modules, and functions should be open to extension, but
+       closed for modification. This means that the function of a class or software entity can be extended without
+       altering existing code. This improves scalability since the entire code does not need to be reviewed upon making
+       a change, and reduces the probability of bugs. This code demonstrates the open-closed principle through the
+       calculation class of the calculator.</p>
+    <br>
+    <img class="article_img" src="images/open_closed_principle.png" alt="the facade of the calculator program" width="550" height="350">
+    <hr>
+    <p>Let's say that we wanted to add another function to the calculator called power. To do so, we would need
+       to extend the facade to add the power calculation that calls to the history, and from the history calls to the
+       power class, which is a subset of the calculation class, as the other operations are. Adding the power class
+       would not cause any change to any of the existing code, and new methods can simply be added at the end of each
+       class.</p>
+    <hr>
+    <h3>Liskov Substitution Principle</h3>
+    <p>The Liskov Substitution Principle is closely tied into the inheritance principle of object-oriented
+       programming. It states that any class derived from a parent class should be able to substitute in place of that
+       parent class. In essence, this is stating that a subclass should be able to use any and all the methods or variables
+       passed to it from the parent class. This is important because it prevents hard-to-track bugs from occurring,
+       and it ensures that the parent class is generic enough to be reusable with other child classes. In the calculator
+       program, we can see this principle used between the calculation class and any of the subclasses.</p>
+    <br>
+    <img class="article_img" src="images/Liskov_substitute.png" alt="the facade of the calculator program" height="500" width="550">
+    <br><br><br>
+    <img class="article_img" src="images/Liskov_substitute1.png" alt="the facade of the calculator program" width="550" height="350">
+    <br><br>
+    <p>Here, we can see that the Addition methods makes use of all the qualities of the Calculation class:</p>
+       <ul>The addition class uses the "create" method to create an addition object</ul>
+       <ul>The values passed to the parent are converted to a list that is saved to the Addition object</ul>
+       <ul>The Addition class uses the values to perform its unique function</ul>
+       <p></p>
+    <hr>
+    <h3>Interface Segregation</h3>
+    <p>Interface segregation principle is about keeping the interfaces separated. In a simpler sense, this means
+       that it is better to create many smaller, more specific interfaces rather than one large, general purpose interface.
+       This prevents extra, or unneeded functionality to be passed, and similar to the Liskov-substitution principle,
+       will lead to minimal bugs. In our calculator program, we can see this by analyzing how the operations are organized.
+       We can see that even though each class inherits values in the same format, since they call have calculation as
+       a parent class, each operation is split up into its own class and very specific interface. In comparison,
+       there could have been one large operation class called "operations" with methods that had each operation
+       as its own method. It would look along the lines of:
+       </p>
+    <img class="article_img" src="images/Interface_segregation.png" alt="the facade of the calculator program" width="550" height="250">
+     <hr>
+     <h3>Dependency Inversion</h3>
+     <p>Dependency Inversion Principle describes that a high level module should not depend on a low level module
+     and instead, they should both be based in abstraction. This means that modules show have some amount of fluidity
+     where they demonstrate abstraction and call methods from another class to perform a specific function. This
+     is closely related to the <i>Open Close Principle</i> because code should be written in a way that it can
+     be extended and not be 'held hostage' by a specific data structure. This is demonstrated in the calculator
+     program by the lack of "if" statements testing against a data type. Specifically, we can see this in the history
+     class and how it utilizes abstraction to be robust.
+     </p>
+    <img class="article_img" src="images/Dependency_inversion.png" alt="the facade of the calculator program" width="550" height="450">
+    <br>
+    <p>As we can see, these functions of the history class demonstrate abstraction, and the dependency inversion
+       principle. They satisfy a single task, appending a specific operation to the calculation history list, but also
+       are open to change. If the operations were to change how they function; like instead of passing an object, they
+       passed a dictionary with the operation and value; the method would still be able to function and create a list
+       of dictionaries.</p>
+    <hr>
+</div>
+</main>
+<div class="footer">
+    <p> <a href="https://validator.w3.org/">W3C Validator</a><br>
+        &copy;
+        <a href="https://github.com/pkb94/history-of-internet">Github</a>
+    </p>
+</div>
+</body>
+</html>
