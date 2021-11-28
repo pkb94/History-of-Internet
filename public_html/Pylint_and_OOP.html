@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {box-sizing: border-box;}
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: snow;
+            background-size: cover;
+            height: 100%;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+
+        }
+
+        @media screen and (max-width: 650px) {
+            .column, .nav, .row, .footer{
+                width: 100%;
+                display: block;
+                flex-direction: column;
+            }
+        }
+
+        .jumbotron{
+            background-image: url(https://www.maxpixel.net/static/photo/1x/Cyan-Pale-Light-Blue-Background-Light-White-2517226.jpg);
+            background-size: cover;
+            height: 100%;
+            padding: 0;
+        }
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+            text-align: center;
+        }
+    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Internet history</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">The History of Internet</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li  class="active"><a href="index.html">Home</a></li>
+            <li><a href="internet_search.html">Internet Search</a></li>
+            <li><a href="dotcom_bubble.html">Dot Com Bubble</a></li>
+            <li><a href="browser_wars.html">Browser Wars</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Project Two<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Pylint_and_OOP.html">Pylint and OOP</a></li>
+                    <li><a href="aaa_testing.html">AAA Testing</a></li>
+                    <li><a href="oop_principles.html">Calculator Program Explained</a></li>
+                    <li><a href="oop_solid_design.html">SOLID Object Oriented Design</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="jumbotron text-center">
+        <h1 class="display-7 fst-italic">Object Oriented Programming</h1>
+        <h4>Understanding the OOP Concepts.</h4>
+    </div>
+        <h2>The OOP Glossary</h2>
+        <div class="article_content">
+            <p>This section contains important terms if you are learning object-oriented programming. Being able to
+               speak the language of OOP is vital to troubleshooting issues in the industry.</p>
+            <hr>
+           <strong> <p class="glossary_word">Factory</p></strong>
+            <p>An object which creates other objects, utilizing polymorphism to accomplish a task.</p>
+            <hr>
+            <strong><p class="glossary_word">Instantiation</p></strong>
+            <p>Creation of an object or an instance of a given class.</p>
+            <hr>
+            <strong><p class="glossary_word">Object</p></strong>
+            <p>Collection of various data and methods to operate on the data</p>
+            <hr>
+            <strong><p class="glossary_word">Class</p></strong>
+            <p>An outline or a blueprint in order to instantiate an object</p>
+            <hr>
+            <strong><p class="glossary_word">Namespace</p></strong>
+            <p>System to ensure that all "names" used within a program or code is unique</p>
+            <hr>
+            <strong><p class="glossary_word">Constructor</p></strong>
+            <p>A method used to instantiate an object, and usually involves assigning values to the object</p>
+            <hr>
+            <strong><p class="glossary_word">Fixture</p></strong>
+            <p>Used within pytest, defines a consistent context for function tests</p>
+            <hr>
+            <strong><p class="glossary_word">Type Hint</p></strong>
+            <p>Quite literally it's name,give Python a hint as to which type of object
+            should be utilized when a program is run. Helps increase predictability with extremely large and complex
+            programs </p>
+            <hr>
+            <strong><p class="glossary_word">Type Cast</p></strong>
+            <p>having the ability to specify the type of data Python should read information as, similar to type hinting
+               with classes. Also having the ability to convert data types</p>
+            <hr>
+            <strong><p class="glossary_word">Unit Test</p></strong>
+            <p>Testing individual aspects of a program, such as specific functions and classes without running the full program</p>
+            <hr>
+            <strong><p class="glossary_word">Static</p></strong>
+            <p>A variable that is declared within a class, but outside a method. Is not directly attached to object creation</p>
+            <hr>
+           <strong><p class="glossary_word">Class Method</p></strong>
+            <p>A method that is bound to the class, but not the object of a class. Similar to static, except is a method.</p>
+            <hr>
+               <strong><p class="glossary_word">Facade</p></strong>
+            <p>A design pattern where a class would contain very simplified interface, and call to other complex functions
+                behind the facade.</p>
+            <hr>
+            <strong><p class="glossary_word">Design Patterns</p></strong>
+            <p>A template on how to solve a problem within programming. In this course, the factory method and is utilized
+               in conjunction with the facade.</p>
+            <hr>
+            <strong><p class="glossary_word">Method</p></strong>
+            <p>A function that is associated with a class or object</p>
+            <hr>
+            <strong><p class="glossary_word">Property</p></strong>
+            <p>The attributes that characterize a class. A set of methods which 'get' a value and 'set' the new value.</p>
+            <hr>
+            <strong><p class="glossary_word">Decorator Method</p></strong>
+            <p>A design pattern to structure code. Adds functionality to a class without directly changing it</p>
+            <hr>
+            <strong><p class="glossary_word">Tuple</p></strong>
+            <p>A common data structure that consists of a set of items with a specific order that are unchangeable</p>
+            <hr>
+        </div>
+
+        <div class="article">
+        <h2 class="headline_text">Pylint Explained</h2>
+        <div class="article_content">
+            <p> In Python, users typically follow the PEP8 style-guide.
+                Pylint is a tool that aids in the unification of the python language and helps organize code in such a way
+                that follows the style-guide, and also can detect errors, but also make suggestions to write better code.
+                To begin the implementation, pylint first needs to be installed to the system, you can run the following
+                command in terminal:
+            </p>
+           <strong><p>pip install pylint</p></strong>
+            <hr>
+            <p>When implementing Pylint to the program, we will have a ".pylintrc" which is essentially the readme for
+                Pylint. This document contains the style corrections Pylint will make along with how pylint will work and
+                what will be returned after running pylint.</p>
+            <hr>
+            <p>To run pylint, it is very simple. Simply follow the format below, and it will return a report for your python file!</p>
+            <strong><p class="code_text">pylint {file_name}.py</p></strong>
+            <hr>
+            <p>Here is an example of a pylint report. In the code below, we can see that I commented out the docstring of
+            the function, which is not up to PEP8 standards. We can also see that there is a pylint comment under that which
+            tells pylint not to report the following "errors".</p>
+            <img class="article_img" src="images/Pylint_code_error.png" alt="some code that will cause a pylint error" height="150" width="550">
+            <p>And the report will locate the error and will exactly tell the line no of the error and indicate why there is an issue.</p>
+            <img class="article_img" src="images/Pylint_error1.png" alt="pylint report for the code above" height="150" width="550">
+            <p> The report will also mention the number of failed test cases, as we see on the screenshot</p>
+            <img class="article_img" src="images/Pylint_failed.png" alt="pylint failed" width="550" height="300">
+            <p>Once, we solve the errors and run the pylint, all the test cases are passed.</p>
+            <img class="article_img" src="images/Pylint_passed.png" alt="pylint passed" width="550" height="300">
+        </div>
+        </div>
+</main>
+    <br>
+<div class="footer">
+    <p> <a href="https://validator.w3.org/">W3C Validator</a><br>
+        &copy;
+        <a href="https://github.com/pkb94/history-of-internet">Github</a>
+    </p>
+</div>
+</body>
+</html>
